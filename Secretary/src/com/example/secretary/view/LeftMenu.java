@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
-public class Menu extends HorizontalScrollView {
+public class LeftMenu extends HorizontalScrollView {
 	private LinearLayout wapper;
 	private ViewGroup mMenu;
 	private ViewGroup mContent;
@@ -18,8 +18,9 @@ public class Menu extends HorizontalScrollView {
 	private int mMenuWidth;
 	private int mMenuRightPadding=50;
 	private boolean once=false;
+	private boolean isopen=false;
 
-	public Menu(Context context, AttributeSet attrs) {
+	public LeftMenu(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		//»ñµÃÆÁÄ»µÄ¿í
 		WindowManager wm=(WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -63,12 +64,31 @@ public class Menu extends HorizontalScrollView {
     	     int ScrollX=getScrollX();
     	     if(ScrollX>=mMenuWidth/2){
     	    	 this.smoothScrollTo(mMenuWidth,0);
+    	    	 isopen=false;
     	     }else{
     	    	 this.smoothScrollTo(0,0);
-
+                 isopen=true;
     	     }
     		 return true;
     	}
     	return super.onTouchEvent(ev);
+    }
+    public void openMenu(){
+    	if(isopen) return;
+    	this.smoothScrollTo(0, 0);
+    	isopen=true;
+    }
+    public void closeMenu(){
+    	if(!isopen) return;
+    	this.smoothScrollTo(mMenuWidth, 0);
+    	isopen=false ;
+    }
+    public void toggle(){
+    	if(isopen){
+    		closeMenu();
+    	}
+    	else{
+    		openMenu();
+    	}
     }
 }

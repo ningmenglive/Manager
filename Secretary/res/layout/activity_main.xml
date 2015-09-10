@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <com.example.secretary.view.Menu
+    <com.example.secretary.view.LeftMenu
+        android:id="@+id/menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
@@ -14,8 +15,39 @@
             <include layout="@layout/leftmenu"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>"
+                android:layout_height="match_parent">
+                <RelativeLayout 
+                    android:layout_width="match_parent"
+				    android:layout_height="48dp"
+				    android:background="#ffffff">
+                    <ImageView
+				        android:id="@+id/leftmenu"
+				        android:layout_height="wrap_content"
+				        android:layout_width="wrap_content"
+				        android:layout_centerVertical="true"
+				        android:src="@drawable/common_title_back_selector" />
+				
+				    <TextView
+				        android:id="@+id/common_title_title"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_centerInParent="true"
+				        android:textColor="@android:color/black"
+				        android:textSize="20sp" />
+				
+				    <TextView
+				        android:id="@+id/common_title_operater"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentRight="true"
+				        android:layout_centerInParent="true"
+				        android:layout_marginRight="10dp"
+				        android:textColor="@android:color/white"
+				        android:textSize="16sp"
+				        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
         </LinearLayout>
-    </com.example.secretary.view.Menu>
+    </com.example.secretary.view.LeftMenu>
 
 </RelativeLayout>
