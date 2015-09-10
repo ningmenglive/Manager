@@ -4,18 +4,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity" >
 
-    <com.example.secretary.view.LeftMenu
-        android:id="@+id/menu"
+    <com.example.secretary.view.SlidingView
+        android:id="@+id/sliding"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="horizontal">
-            <include layout="@layout/leftmenu"/>
+            <include 
+                android:id="@+id/menu"
+                layout="@layout/leftmenu"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
                 <RelativeLayout 
                     android:layout_width="match_parent"
 				    android:layout_height="48dp"
@@ -46,8 +49,17 @@
 				        android:textSize="16sp"
 				        android:visibility="gone" />
                 </RelativeLayout>
+                <View
+			        android:id="@+id/line"
+			        android:layout_width="match_parent"
+			        android:layout_height="0.5dp"
+			        android:background="#CBCED2" />
+                <FrameLayout 
+                    android:id="@+id/frame_content"
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"/>
             </LinearLayout>
         </LinearLayout>
-    </com.example.secretary.view.LeftMenu>
+    </com.example.secretary.view.SlidingView>
 
 </RelativeLayout>

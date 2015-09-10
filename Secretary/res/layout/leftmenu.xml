@@ -8,7 +8,12 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical">
+        <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:background="#CBCED2" />
         <RelativeLayout
+            android:id="@+id/btn_dynamic"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
             <ImageView 
@@ -27,7 +32,12 @@
                 android:textColor="#ffffff"
                 android:text="动态"/>
         </RelativeLayout>
+        <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:background="#CBCED2" />
         <RelativeLayout
+            android:id="@+id/btn_project"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
             <ImageView 
@@ -46,7 +56,12 @@
                 android:textColor="#ffffff"
                 android:text="项目"/>
         </RelativeLayout>
+        <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:background="#CBCED2" />
         <RelativeLayout
+            android:id="@+id/btn_notice"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
             <ImageView 
@@ -65,10 +80,12 @@
                 android:textColor="#ffffff"
                 android:text="通知"/>
         </RelativeLayout>
-        <View 
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>"
+        <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:background="#CBCED2" />
         <RelativeLayout
+            android:id="@+id/btn_myself"
             android:layout_height="wrap_content"
             android:layout_width="match_parent">
             <ImageView 
@@ -87,6 +104,10 @@
                 android:textColor="#ffffff"
                 android:text="自己"/>
         </RelativeLayout>
+         <View
+	        android:layout_width="match_parent"
+	        android:layout_height="0.5dp"
+	        android:background="#CBCED2" />
     </LinearLayout>
 
 </RelativeLayout>

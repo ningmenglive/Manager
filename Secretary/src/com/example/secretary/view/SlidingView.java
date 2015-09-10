@@ -10,7 +10,7 @@ import android.view.WindowManager;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
-public class LeftMenu extends HorizontalScrollView {
+public class SlidingView extends HorizontalScrollView {
 	private LinearLayout wapper;
 	private ViewGroup mMenu;
 	private ViewGroup mContent;
@@ -20,7 +20,7 @@ public class LeftMenu extends HorizontalScrollView {
 	private boolean once=false;
 	private boolean isopen=false;
 
-	public LeftMenu(Context context, AttributeSet attrs) {
+	public SlidingView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		//»ñµÃÆÁÄ»µÄ¿í
 		WindowManager wm=(WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
