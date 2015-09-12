@@ -9,6 +9,7 @@ public class MyApplication extends Application {
 
 	public static RequestQueue mRequestQueue;
 	static int id=0;
+	public static String email=null;
 	static String username=null;
 	static String info=null;
 	@Override

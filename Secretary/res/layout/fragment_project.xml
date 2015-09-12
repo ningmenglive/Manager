@@ -7,5 +7,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="这是一个项目"/>
-
+    <ListView
+        android:id="@+id/list_pro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
