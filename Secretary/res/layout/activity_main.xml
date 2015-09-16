@@ -28,7 +28,7 @@
 				        android:layout_height="45dp"
 				        android:layout_width="45dp"
 				        android:layout_centerVertical="true"
-				        android:src="@drawable/common_title_back_selector" />
+				        android:src="@drawable/common_title_menu_selector" />
 				
 				    <TextView
 				        android:id="@+id/common_title_title"
