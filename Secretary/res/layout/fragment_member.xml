@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <Button
+            android:id="@+id/btn_addmember"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/btn_white_gray_selector"
+            android:text="添加成员"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    <ListView
+        android:id="@+id/list_mem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

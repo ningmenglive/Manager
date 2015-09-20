@@ -39,15 +39,15 @@
 				        android:textSize="20sp" />
 				
 				    <TextView
-				        android:id="@+id/common_title_operater"
+				        android:id="@+id/common_add_btn"
 				        android:layout_width="wrap_content"
 				        android:layout_height="wrap_content"
 				        android:layout_alignParentRight="true"
 				        android:layout_centerInParent="true"
 				        android:layout_marginRight="10dp"
-				        android:textColor="@android:color/white"
+				        android:textColor="@android:color/black"
 				        android:textSize="16sp"
-				        android:visibility="gone" />
+				        android:visibility="visible" />
                 </RelativeLayout>
                 <View
 			        android:id="@+id/line"

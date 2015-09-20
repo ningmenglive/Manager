@@ -48,9 +48,6 @@ public class LoginActivity extends Activity {
 	}
 	private void init() {
 		// TODO Auto-generated method stub
-	
-		et_email.setText("755327458@qq.com");
-		et_pwd.setText("755327458");
 		login.setOnClickListener(new OnClickListener() {		
 			@Override
 			public void onClick(View arg0) {

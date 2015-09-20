@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+    <ImageView
+        android:id="@+id/thead"
+        android:paddingLeft="10dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/member_head"/>
+    <TextView 
+        android:id="@+id/cname"
+        android:layout_width="45dp"
+        android:layout_height="20dp"
+        android:text="text"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/thead"
+        android:textSize="10sp"/>
+    <View
+        android:id="@+id/space"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/mhead"
+        />
+    <TextView
+        android:id="@+id/tname"
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@id/space"
+         android:gravity="center_horizontal"
+        android:text="textview"
+        android:textSize="20sp"
+        />
+     <TextView
+        android:id="@+id/tnext"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@id/tname"
+        android:layout_toRightOf="@id/space"
+        android:gravity="center_horizontal"
+        android:text="textview"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>

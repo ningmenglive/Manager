@@ -147,5 +147,9 @@
                 android:background="#CBCED2" />
         </RelativeLayout>
     </LinearLayout>
+    <FrameLayout
+	        android:id="@+id/fl_content"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"/>
 
 </LinearLayout>

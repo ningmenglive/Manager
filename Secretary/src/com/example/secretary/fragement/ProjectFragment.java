@@ -14,16 +14,20 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.example.secretary.MyApplication;
+import com.example.secretary.ProjectActivity;
 import com.example.secretary.R;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -33,7 +37,6 @@ public class ProjectFragment extends Fragment {
 	 private Context mContext;
 	 private View mBaseView;
 	 private ListView prolistview;
-	 private List<ProjectEntity> pros;
 	 List<ProjectEntity> prolist=new ArrayList();
 	 Handler han=new Handler();
 	@Override
@@ -54,6 +57,19 @@ public class ProjectFragment extends Fragment {
 	private void init() {
 		// TODO Auto-generated method stub
 		post();
+		prolistview.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				// TODO Auto-generated method stub
+				ProjectEntity pro = prolist.get(arg2);
+				Intent intent = new Intent(mContext,ProjectActivity.class);
+				intent.putExtra("pid", pro.pid);
+				intent.putExtra("pname",pro.pname);
+				startActivity(intent);
+				
+			}
+		});
 	}
 	
 	private void post() {
